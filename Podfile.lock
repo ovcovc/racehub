@@ -27,6 +27,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - PKHUD (4.2.3)
   - Realm (2.10.0):
     - Realm/Headers (= 2.10.0)
   - Realm/Headers (2.10.0)
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - GoogleMaps
   - Kingfisher
   - MXParallaxHeader
+  - PKHUD (~> 4.0)
   - RealmSwift
   - RxCocoa
   - RxGesture
@@ -61,6 +63,7 @@ SPEC CHECKSUMS:
   Kingfisher: c8911a7672c6217dec8c0520fb6e76ec4b7e0780
   MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  PKHUD: c7692163a09875cbf15827dc581df3c5cf7f1015
   Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
   RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
@@ -68,6 +71,6 @@ SPEC CHECKSUMS:
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: 21fcbf4c31284f8733fde8b67f0ff172a4820480
+PODFILE CHECKSUM: bdcc9e4763762b85abe1d1a7b9e32078335696c6
 
 COCOAPODS: 1.2.0

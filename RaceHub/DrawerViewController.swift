@@ -14,6 +14,7 @@ import CoreLocation
 
 class DrawerViewController: UIViewController {
     
+    @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var moreLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
@@ -29,15 +30,17 @@ class DrawerViewController: UIViewController {
             eventViewModel = EventViewModelImpl(event: event!)
         }
     }
-    private var eventViewModel: EventViewModel? {
+    private var eventViewModel: EventViewModel! {
         didSet {
-            updateLabels()
+            bindValues()
         }
     }
-    
+
     var currentLocation: CLLocation? {
         didSet {
-            updateLabels()
+            if let location = currentLocation {
+                eventViewModel?.updateDistance(from: location)
+            }
         }
     }
     
@@ -79,15 +82,13 @@ class DrawerViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
-    private func updateLabels() {
-        guard let eventViewModel = eventViewModel else {
-            titleLabel.text = ""
-            infoLabel.text = ""
-            return
+    private func bindValues() {
+        eventViewModel?.name.asObservable().bind(to: titleLabel.rx.text).addDisposableTo(disposeBag)
+        eventViewModel?.dateText.asObservable().bind(to: infoLabel.rx.text).addDisposableTo(disposeBag)
+        eventViewModel?.distanceString.asObservable().bind(to: distanceLabel.rx.text).addDisposableTo(disposeBag)
+        if let location = currentLocation {
+            eventViewModel?.updateDistance(from: location)
         }
-        titleLabel.text = eventViewModel.name()
-        let distance = (currentLocation != nil) ? eventViewModel.distance(from: currentLocation!) : ""
-        infoLabel.text = "\(eventViewModel.dateText())\n\(distance)"
     }
     
     private func setUI() {

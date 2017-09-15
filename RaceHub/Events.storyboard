@@ -71,23 +71,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dystanse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty4-Kf-5oQ">
-                                <rect key="frame" x="152" y="323" width="71.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="203" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DPA-nc-TOQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="203" id="vZO-rB-BXY">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="203"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vZO-rB-BXY" id="Of7-dM-zcL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="202.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ty4-Kf-5oQ" firstAttribute="centerX" secondItem="AsN-M5-KQN" secondAttribute="centerX" id="WZx-0I-SvF"/>
-                            <constraint firstItem="ty4-Kf-5oQ" firstAttribute="centerY" secondItem="AsN-M5-KQN" secondAttribute="centerY" id="yVC-Qs-6bf"/>
+                            <constraint firstAttribute="trailing" secondItem="DPA-nc-TOQ" secondAttribute="trailing" id="33D-ev-z4e"/>
+                            <constraint firstItem="DPA-nc-TOQ" firstAttribute="top" secondItem="AsN-M5-KQN" secondAttribute="top" id="6Wu-fz-bOY"/>
+                            <constraint firstItem="cjd-K4-A6J" firstAttribute="top" secondItem="DPA-nc-TOQ" secondAttribute="bottom" id="cMp-bl-tWw"/>
+                            <constraint firstItem="DPA-nc-TOQ" firstAttribute="leading" secondItem="AsN-M5-KQN" secondAttribute="leading" id="xOk-vx-eku"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkL-my-O2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="82"/>
+            <point key="canvasLocation" x="1685.5999999999999" y="81.409295352323838"/>
         </scene>
         <!--Event Feed View Controller-->
         <scene sceneID="xhU-ch-YEq">
@@ -300,6 +310,7 @@ Landjaeger boudin t-bone sausage chicken spare ribs porchetta flank pork loin jo
                         <outlet property="descriptionLabel" destination="moR-pk-fcl" id="7zG-e0-wzf"/>
                         <outlet property="distancesLabel" destination="y8a-Kg-LbC" id="vAq-xU-fhg"/>
                         <outlet property="imageView" destination="m7p-mT-Xfg" id="bxI-Ae-Oxw"/>
+                        <outlet property="shadowView" destination="oJs-2O-rWd" id="mdf-sm-axW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCO-wu-oX6" userLabel="First Responder" sceneMemberID="firstResponder"/>

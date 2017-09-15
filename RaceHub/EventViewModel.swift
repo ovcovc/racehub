@@ -8,11 +8,14 @@
 
 import Foundation
 import CoreLocation
+import RxCocoa
+import RxSwift
 
 protocol EventViewModel {
-    func name() -> String
-    func dateText() -> String
-    func distance(from currentLocation: CLLocation) -> String
+    var dateText: Variable<String> { get set }
+    var name: Variable<String> { get set }
+    var distanceString: Variable<String> { get set }
+    func updateDistance(from location: CLLocation)
 }
 
 class EventViewModelImpl: EventViewModel {
@@ -20,21 +23,19 @@ class EventViewModelImpl: EventViewModel {
     private let event: Event
     private let dateProvider: DateProvider = DateProviderImpl()
     
+    var name = Variable<String>("")
+    var dateText = Variable<String>("")
+    var distanceString = Variable<String>("")
+    
     init(event: Event) {
         self.event = event
+        dateText.value = dateProvider.parse(event.date)
+        name.value = event.name
     }
     
-    func name() -> String {
-        return event.name
+    func updateDistance(from location: CLLocation) {
+        let distance = Int(event.location.distance(from: location) / 1000.0)
+        distanceString.value = "distance_from_you".localized.format(parameters: distance)
     }
-    
-    func dateText() -> String {
-        return dateProvider.parse(event.date)
-    }
-    
-    func distance(from currentLocation: CLLocation) -> String {
-        let distance = Int(event.location.distance(from: currentLocation) / 1000.0)
-        return "distance_from_you".localized.format(parameters: distance)
-    }
-    
+
 }

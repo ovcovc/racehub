@@ -17,6 +17,7 @@ protocol EventDetailsViewModel {
     var name: Variable<String> { get set }
     var distances: Variable<String> { get set }
     var placeAndDate: Variable<String> { get set }
+    var fetching: Variable<Bool> { get set }
 }
 
 class EventDetailsViewModelImpl: EventDetailsViewModel {
@@ -31,6 +32,7 @@ class EventDetailsViewModelImpl: EventDetailsViewModel {
     var name = Variable<String>("")
     var distances = Variable<String>("")
     var placeAndDate = Variable<String>("")
+    var fetching = Variable<Bool>(false)
     
     init(eventId: Int) {
         self.eventId = eventId
@@ -38,14 +40,16 @@ class EventDetailsViewModelImpl: EventDetailsViewModel {
     }
     
     func fetchDetails() {
-        service.eventDetails(with: eventId).subscribe(onNext: { [unowned self] details in
+        fetching.value = true
+        service.eventDetails(with: self.eventId).subscribe(onNext: { [unowned self] details in
+            self.fetching.value = false
             self.eventDescription.value = details.desc
             self.imageUrl.value = details.image
             self.name.value = details.name
             let distanceArray = Array(details.distances).map({ $0.distanceString() })
             self.distances.value = distanceArray.joined(separator: " / ")
             self.placeAndDate.value = "\(details.city)\n\(self.dateProvider.parse(details.date))"
-        }).addDisposableTo(disposeBag)
+        }).addDisposableTo(self.disposeBag)
     }
     
 }

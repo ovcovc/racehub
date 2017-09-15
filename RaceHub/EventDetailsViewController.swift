@@ -11,6 +11,7 @@ import XLPagerTabStrip
 import RxCocoa
 import RxSwift
 import RxGesture
+import PKHUD
 
 class EventDetailsViewController: ButtonBarPagerTabStripViewController, Translatable {
     
@@ -18,6 +19,9 @@ class EventDetailsViewController: ButtonBarPagerTabStripViewController, Translat
     var eventName = ""
     private var favBarButton: UIBarButtonItem!
     private var viewModel: EventDetailsViewModel!
+    private let disposeBag = DisposeBag()
+    
+    // MARK: Lifecycle methods
     
     override func viewDidLoad() {
         viewModel = EventDetailsViewModelImpl(eventId: eventId)
@@ -25,8 +29,9 @@ class EventDetailsViewController: ButtonBarPagerTabStripViewController, Translat
         super.viewDidLoad()
         setUI()
         setupRx()
-        viewModel.fetchDetails()
     }
+    
+    // MARK: Customization methods
     
     private func setUI() {
         favBarButton = UIBarButtonItem(image: UIImage(named: "StarEmpty"), style: .plain, target: self, action: nil)
@@ -35,7 +40,9 @@ class EventDetailsViewController: ButtonBarPagerTabStripViewController, Translat
     }
     
     private func setupRx() {
-        
+        viewModel.fetching.asObservable().bind { fetching in
+            fetching ? HUD.show(.progress) : HUD.hide()
+        }.addDisposableTo(disposeBag)
     }
     
     private func setButtonBarUI() {
@@ -56,9 +63,7 @@ class EventDetailsViewController: ButtonBarPagerTabStripViewController, Translat
         }
     }
     
-    func applyTranslations() {
-        
-    }
+    func applyTranslations() { /* No content to translate */ }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let landing = EventLandingViewController.initialize(with: viewModel)

@@ -11,22 +11,28 @@ import XLPagerTabStrip
 import RxCocoa
 import RxSwift
 import Kingfisher
+import PKHUD
 
-class EventLandingViewController: UIViewController, IndicatorInfoProvider {
+class EventLandingViewController: UIViewController {
     
+    @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var distancesLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     private var viewModel: EventDetailsViewModel!
-    private let disposableBag = DisposeBag()
+    private let disposeBag = DisposeBag()
+    
+    // MARK: Static convenience initializer
     
     static func initialize(with viewModel: EventDetailsViewModel) ->  EventLandingViewController{
         let viewController = UIStoryboard(name: "Events", bundle: nil).instantiateViewController(withIdentifier: "EventLandingViewController") as! EventLandingViewController
         viewController.viewModel = viewModel
         return viewController
     }
+    
+    // MARK: Lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,17 +42,23 @@ class EventLandingViewController: UIViewController, IndicatorInfoProvider {
     private func setupRx() {
         viewModel.imageUrl.asObservable().subscribe(onNext: { [unowned self] url in
             self.imageView.kf.setImage(with: URL(string: url))
-        }).addDisposableTo(disposableBag)
-        viewModel.placeAndDate.asObservable().bind(to: dateLabel.rx.text).addDisposableTo(disposableBag)
-        viewModel.distances.asObservable().bind(to: distancesLabel.rx.text).addDisposableTo(disposableBag)
-        viewModel.eventDescription.asObservable().bind(to: descriptionLabel.rx.text).addDisposableTo(disposableBag)
+        }).addDisposableTo(disposeBag)
+        viewModel.placeAndDate.asObservable().bind(to: dateLabel.rx.text).addDisposableTo(disposeBag)
+        viewModel.distances.asObservable().bind(to: distancesLabel.rx.text).addDisposableTo(disposeBag)
+        viewModel.eventDescription.asObservable().bind(to: descriptionLabel.rx.text).addDisposableTo(disposeBag)
         viewModel.name.asObservable().subscribe(onNext: { [unowned self] name in
             self.title = name
-        }).addDisposableTo(disposableBag)
+        }).addDisposableTo(disposeBag)
+        viewModel.fetching.asObservable().bind { fetching in
+            self.shadowView.isHidden = fetching
+        }.addDisposableTo(disposeBag)
     }
+}
+
+extension EventLandingViewController: IndicatorInfoProvider {
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Informacje")
+        return IndicatorInfo(title: "information".localized)
     }
     
 }

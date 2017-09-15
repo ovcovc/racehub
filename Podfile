@@ -14,6 +14,7 @@ def common_pods
     pod 'XLPagerTabStrip', '~> 7.0'
     pod 'Firebase/Core'
     pod 'Kingfisher'
+    pod 'PKHUD', '~> 4.0'
 end
 
 target 'RaceHub' do
