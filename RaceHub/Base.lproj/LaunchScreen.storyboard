@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +19,59 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82S-Wl-ttv">
+                                <rect key="frame" x="37.5" y="247.5" width="299.5" height="172.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="M2n-9y-MuZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIc-ZZ-bKG">
+                                        <rect key="frame" x="0.0" y="108" width="299.5" height="64.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Race">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="47" name="AvenirNextCondensed-UltraLight"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="HUB">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.60784313725490191" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="47" name="AvenirNextCondensed-DemiBold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dIc-ZZ-bKG" secondAttribute="trailing" id="1lX-7U-bhr"/>
+                                    <constraint firstAttribute="bottom" secondItem="dIc-ZZ-bKG" secondAttribute="bottom" id="Qz0-g3-qTM"/>
+                                    <constraint firstAttribute="trailing" secondItem="M2n-9y-MuZ" secondAttribute="trailing" id="Szb-93-obL"/>
+                                    <constraint firstItem="M2n-9y-MuZ" firstAttribute="top" secondItem="82S-Wl-ttv" secondAttribute="top" id="V0k-PC-QA3"/>
+                                    <constraint firstItem="dIc-ZZ-bKG" firstAttribute="top" secondItem="M2n-9y-MuZ" secondAttribute="bottom" constant="8" id="Wkx-09-caU"/>
+                                    <constraint firstItem="M2n-9y-MuZ" firstAttribute="leading" secondItem="82S-Wl-ttv" secondAttribute="leading" id="iaf-Vs-GVt"/>
+                                    <constraint firstItem="dIc-ZZ-bKG" firstAttribute="leading" secondItem="82S-Wl-ttv" secondAttribute="leading" id="vGJ-gY-Zry"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.32549019610000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="82S-Wl-ttv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kP4-9s-ldn"/>
+                            <constraint firstItem="82S-Wl-ttv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rbG-g1-zUt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="300" height="100"/>
+    </resources>
 </document>

@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  RaceHub
+
+  Created by Piotr Olejnik on 09.09.2017.
+  Copyright © 2017 gat. All rights reserved.
+*/
+
+"distance_from_you" = "%d km od ciebie";
+"drawer_more_label" = "Więcej...";
+"filters_title_label" = "Filtry";
+"run_events" = "Biegi";
+"bike_events" = "Wyścigi rowerowe";
+"multisport_events" = "Multisport";
+"from_label" = "Wyszukaj od:";
+"to_label" = "Do:";
+"no_results" = "Brak wyników";
+"searching" = "Wyszukiwanie...";
+"feed_icon" = "Aktualności";
+"my_events_icon" = "Moje zawody";
+"mapa_icon" = "Mapa";
+"profile_icon" = "Mój profil";
+"more_icon" = "Więcej";

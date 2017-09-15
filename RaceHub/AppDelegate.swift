@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import GoogleMaps
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private struct Constants {
+        static let googleMapsKey = "AIzaSyCDVD6Waofg2Pa1BVMJxk9to28vgN3xxik"
+    }
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        ThemeManager.applyRegularTheme()
+        GMSServices.provideAPIKey(Constants.googleMapsKey)
+        FirebaseApp.configure()
         return true
     }
 
