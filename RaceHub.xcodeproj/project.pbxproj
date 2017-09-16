@@ -58,6 +58,8 @@
 		DD663DE21F558C2D00832413 /* RaceHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD663DE11F558C2D00832413 /* RaceHubTests.swift */; };
 		DD663DED1F558C2D00832413 /* RaceHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD663DEC1F558C2D00832413 /* RaceHubUITests.swift */; };
 		DD663DFC1F55973E00832413 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD663DFB1F55973E00832413 /* MapViewController.swift */; };
+		DD806E4E1F6C79B700DBEA84 /* EventDistanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD806E4D1F6C79B600DBEA84 /* EventDistanceCell.swift */; };
+		DD88D74C1F6D2AEE00DEC968 /* EventDistanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88D74B1F6D2AEE00DEC968 /* EventDistanceViewModel.swift */; };
 		E058D2CF94D6F8A3A748847B /* Pods_RaceHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDADD6C81F86D2027343558D /* Pods_RaceHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +147,8 @@
 		DD663DEC1F558C2D00832413 /* RaceHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceHubUITests.swift; sourceTree = "<group>"; };
 		DD663DEE1F558C2D00832413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD663DFB1F55973E00832413 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DD806E4D1F6C79B600DBEA84 /* EventDistanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDistanceCell.swift; sourceTree = "<group>"; };
+		DD88D74B1F6D2AEE00DEC968 /* EventDistanceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDistanceViewModel.swift; sourceTree = "<group>"; };
 		DDADD6C81F86D2027343558D /* Pods_RaceHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RaceHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE5CE52D399D9D26A03C6B1 /* Pods-RaceHubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaceHubUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RaceHubUITests/Pods-RaceHubUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -307,6 +311,8 @@
 				DD4F5E2F1F69946F00FBC987 /* EventRidesViewController.swift */,
 				DD4F5E311F6996B500FBC987 /* EventContactViewController.swift */,
 				DD1EF16B1F6AD30C00253B6B /* EventDetailsViewModel.swift */,
+				DD806E4D1F6C79B600DBEA84 /* EventDistanceCell.swift */,
+				DD88D74B1F6D2AEE00DEC968 /* EventDistanceViewModel.swift */,
 			);
 			name = EventDetails;
 			sourceTree = "<group>";
@@ -686,6 +692,7 @@
 				DD4F5E001F63FCB500FBC987 /* UIView+Tools.swift in Sources */,
 				DD4F5E091F640DEC00FBC987 /* DateFormatterFactory.swift in Sources */,
 				DD4F5E1B1F655D3400FBC987 /* FiltersViewController.swift in Sources */,
+				DD88D74C1F6D2AEE00DEC968 /* EventDistanceViewModel.swift in Sources */,
 				DD663DFC1F55973E00832413 /* MapViewController.swift in Sources */,
 				DD4F5E0D1F6416D800FBC987 /* EventViewModel.swift in Sources */,
 				DD4F5DF01F5EDFAA00FBC987 /* RxGMSMapViewDelegateProxy.swift in Sources */,
@@ -703,6 +710,7 @@
 				DD01E94F1F55AD0700E27842 /* Theme.swift in Sources */,
 				DD01E9571F55CD8A00E27842 /* Themes.swift in Sources */,
 				DD4F5DF81F618D6A00FBC987 /* EventMarker.swift in Sources */,
+				DD806E4E1F6C79B700DBEA84 /* EventDistanceCell.swift in Sources */,
 				DD01E9631F55D7E700E27842 /* Segues.swift in Sources */,
 				DD4F5E2A1F696C5A00FBC987 /* EventLandingViewController.swift in Sources */,
 				DD4F5DEC1F5D70C500FBC987 /* SearchViewController.swift in Sources */,

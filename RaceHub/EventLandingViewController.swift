@@ -44,7 +44,7 @@ class EventLandingViewController: UIViewController {
             self.imageView.kf.setImage(with: URL(string: url))
         }).addDisposableTo(disposeBag)
         viewModel.placeAndDate.asObservable().bind(to: dateLabel.rx.text).addDisposableTo(disposeBag)
-        viewModel.distances.asObservable().bind(to: distancesLabel.rx.text).addDisposableTo(disposeBag)
+        viewModel.distanceString.asObservable().bind(to: distancesLabel.rx.text).addDisposableTo(disposeBag)
         viewModel.eventDescription.asObservable().bind(to: descriptionLabel.rx.text).addDisposableTo(disposeBag)
         viewModel.name.asObservable().subscribe(onNext: { [unowned self] name in
             self.title = name

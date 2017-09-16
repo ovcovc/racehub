@@ -23,3 +23,6 @@
 "more_icon" = "More";
 "information" = "Details";
 "distances" = "Distances";
+"hours_short" = "h";
+"minutes_short" = "m";
+"time_limit" = "Time limit";

@@ -13,8 +13,13 @@ import RxSwift
 
 class EventDistancesViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     private var viewModel: EventDetailsViewModel!
     private let disposeBag = DisposeBag()
+    
+    private enum Constants {
+        static let cellIdentifier = "runCell"
+    }
     
     // MARK: Static convenience initializer
     
@@ -34,7 +39,14 @@ class EventDistancesViewController: UIViewController {
     // MARK: Customization methods
     
     func setupRx() {
-        
+        viewModel.distanceArray.asObservable().bind(to: tableView.rx.items(cellIdentifier: Constants.cellIdentifier, cellType: EventDistanceCell.self)) {
+            row, distance, cell in
+                let distanceViewModel = EventDistanceViewModelImpl(distance: distance)
+                distanceViewModel.dateString.asObservable().bind(to: cell.dateLabel.rx.text).addDisposableTo(self.disposeBag)
+                distanceViewModel.nameString.asObservable().bind(to: cell.nameLabel.rx.text).addDisposableTo(self.disposeBag)
+                distanceViewModel.distanceString.asObservable().bind(to: cell.distanceLabel.rx.text).addDisposableTo(self.disposeBag)
+                distanceViewModel.limitString.asObservable().bind(to: cell.limitLabel.rx.text).addDisposableTo(self.disposeBag)
+            }.addDisposableTo(disposeBag)
     }
     
 }
