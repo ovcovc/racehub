@@ -613,6 +613,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB9-qj-cMG">
+                                                    <rect key="frame" x="100" y="56.5" width="21.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Apr-CP-6Ls" firstAttribute="top" secondItem="6ak-6a-Qpe" secondAttribute="top" constant="15" id="Cds-VN-Bod"/>
@@ -624,9 +630,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="Jiz-q1-Vjv" secondAttribute="trailing" id="PSD-f5-43M"/>
                                                 <constraint firstAttribute="trailing" secondItem="2al-pI-yUp" secondAttribute="trailing" id="Qdo-Rr-CLS"/>
                                                 <constraint firstItem="b2m-ij-EGR" firstAttribute="leading" secondItem="Apr-CP-6Ls" secondAttribute="trailing" constant="15" id="SSs-1b-NTU"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="b2m-ij-EGR" secondAttribute="bottom" constant="15" id="ael-Pc-tSh"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gB9-qj-cMG" secondAttribute="bottom" constant="15" id="TcP-GT-4aj"/>
+                                                <constraint firstItem="gB9-qj-cMG" firstAttribute="top" secondItem="b2m-ij-EGR" secondAttribute="bottom" constant="2" id="XOl-qh-D4r"/>
+                                                <constraint firstItem="7Do-yi-JsB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gB9-qj-cMG" secondAttribute="trailing" constant="4" id="fKo-Ac-fy1"/>
                                                 <constraint firstItem="Jiz-q1-Vjv" firstAttribute="leading" secondItem="rH5-GB-iqn" secondAttribute="trailing" id="g22-tX-NTa"/>
                                                 <constraint firstItem="7Do-yi-JsB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b2m-ij-EGR" secondAttribute="trailing" constant="8" id="gWm-Q5-fgt"/>
+                                                <constraint firstItem="gB9-qj-cMG" firstAttribute="leading" secondItem="Apr-CP-6Ls" secondAttribute="trailing" constant="15" id="q2Z-WI-pzd"/>
                                                 <constraint firstAttribute="bottom" secondItem="2al-pI-yUp" secondAttribute="bottom" id="q6s-7B-wy4"/>
                                                 <constraint firstItem="2al-pI-yUp" firstAttribute="top" secondItem="Jiz-q1-Vjv" secondAttribute="bottom" id="rfM-RU-qCM"/>
                                                 <constraint firstItem="Apr-CP-6Ls" firstAttribute="leading" secondItem="6ak-6a-Qpe" secondAttribute="leading" constant="15" id="t06-Cy-qjQ"/>
@@ -658,6 +667,7 @@
                         <outlet property="blurView" destination="9H9-JU-N5K" id="79H-Mu-Ea4"/>
                         <outlet property="closeButton" destination="Jiz-q1-Vjv" id="PiI-98-Ane"/>
                         <outlet property="containerView" destination="Zd2-eS-Lu9" id="VK0-DG-8gp"/>
+                        <outlet property="distanceLabel" destination="gB9-qj-cMG" id="lWh-mJ-cjM"/>
                         <outlet property="infoLabel" destination="b2m-ij-EGR" id="qUc-69-m3B"/>
                         <outlet property="logoImageView" destination="Apr-CP-6Ls" id="RmY-38-wSI"/>
                         <outlet property="moreButton" destination="2al-pI-yUp" id="le9-4M-J0H"/>

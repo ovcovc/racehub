@@ -21,3 +21,8 @@
 "mapa_icon" = "Map";
 "profile_icon" = "My profile";
 "more_icon" = "More";
+"information" = "Details";
+"distances" = "Distances";
+"hours_short" = "h";
+"minutes_short" = "m";
+"time_limit" = "Time limit";

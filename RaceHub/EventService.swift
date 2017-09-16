@@ -65,6 +65,14 @@ struct EventServiceImpl: EventService {
         distance1.distance = 100000
         distance1.hourLimit = 17
         event.distances.append(distance1)
+        let distance2 = RaceDistance()
+        distance2.desc = "Bieg ultramaratoński, dedykowany doświadczonym biegaczom, z doświadczeniem w biegach górskich. Bieg jest eliminacją Ultra-Trail du Mont-Blanc® w edycji 2018.\n\nMountain ultramarathon for experienced runners. Ultra-Trail du Mont-Blanc® 2017 qualifier.\n\n\nTrasa: 100 km\n\n\nTrasa certyfikowana przez ITRA. Trudna, wyznaczona w Beskidzie Sądeckim, górzysta z licznymi podbiegami i zbiegami, możliwe wiatrołomy. Przewyższenia +/-4500m. Szczegóły w mapie dołączonej do pakietu startowego.\n\nChallenging course in Beskid Sadecki region, with climbs and downhills. Elevation +/-4500m. ITRA certifiication."
+        distance2.rules = "Limity czasu / Time limits:\n\nRytro 36 km – 5h30'\nPiwniczna Zdrój 66 km – 11h30'\nWierchomla 77 km – 13h\nBacówka nad Wierchomlą 88 km – 15h\nKrynica-Zdrój 100 km (meta / finish) – 17h\n\nWyposażenie obowiązkowe / Obligatory equipment\n\nnaładowany telefon komórkowy z numerem ICE / cell phone with ICE numer\nlatarka (czołówka) na pierwszy etap (Krynica- Rytro) i ostatni (Wierchomla- Krynica) / light or torch for the first and ultimate stage\nmapa trasy z pakietu startowego / course map received with bib\nKażdy z uczestników biegu musi posiadać podstawowe ubezpieczenie zdrowotne. Nie ma obowiązku posiadania przy sobie dokumentu potwierdzającego to ubezpieczenie. Organizator nie zapewnia dodatkowego ubezpieczenia NNW – uczestnicy mogą je wykupić we własnym zakresie."
+        distance2.name = "Bieg 7 Dolin - Ultramaraton 66km"
+        distance2.startDate = DateProviderImpl().parse("2017-09-09 06:00:00")
+        distance2.distance = 66000
+        distance2.hourLimit = 10
+        event.distances.append(distance2)
         return event
     }
     
