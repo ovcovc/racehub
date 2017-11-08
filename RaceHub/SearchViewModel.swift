@@ -12,13 +12,14 @@ import RxSwift
 
 protocol SearchViewModel {
     func search(for query: String) -> Observable<Void>
+    var events: Variable<[Event]> { get set }
 }
 
 class SearchViewModelImpl: SearchViewModel {
     
-    let service = EventServiceImpl()
+    private let service = EventServiceImpl()
     var events = Variable<[Event]>([])
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     func search(for query: String) -> Observable<Void> {
         return Observable<Void>.create { observer in

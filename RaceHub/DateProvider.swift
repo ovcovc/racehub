@@ -21,13 +21,11 @@ class DateProviderImpl: DateProvider {
         static let utcTimezone = "Z"
     }
     
-    //@formatter:off
     private let dateFormatters = [
         DateFormatterFactory.sharedInstance.ISOTimeAndDateFormatter,
         DateFormatterFactory.sharedInstance.ISOTimeAndDateFormatterT,
         DateFormatterFactory.sharedInstance.fullTimeFormatter
     ]
-    //@formatter:on
     
     func now() -> Date {
         return Date()

@@ -68,8 +68,8 @@ class EventDetailsViewController: ButtonBarPagerTabStripViewController, Translat
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let landing = EventLandingViewController.initialize(with: viewModel)
         let distances = EventDistancesViewController.initialize(with: viewModel)
-        let feed = UIStoryboard(name: "Events", bundle: nil).instantiateViewController(withIdentifier: "EventFeedViewController")
-        let rides = UIStoryboard(name: "Events", bundle: nil).instantiateViewController(withIdentifier: "EventRidesViewController")
+        let feed = EventFeedViewController.initialize(with: 0)
+        let rides = EventRidesViewController.initialize(with: 0)
         let contact = UIStoryboard(name: "Events", bundle: nil).instantiateViewController(withIdentifier: "EventContactViewController")
         return [landing, distances, feed, rides, contact]
     }

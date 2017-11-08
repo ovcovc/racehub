@@ -26,3 +26,8 @@
 "hours_short" = "g";
 "minutes_short" = "m";
 "time_limit" = "Limit czasowy";
+"news" = "Komunikaty";
+"more_label" = "Szczegóły...";
+"no_rides" = "Brak dojazdów";
+"no_rides_body" = "Niestety, nikt jeszcze nie dodał wspólnego dojazdu na to wydarzenie.";
+"commute_title" = "Wspólne dojazdy";

@@ -21,7 +21,14 @@
 		DD01E9661F55D86D00E27842 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01E9651F55D86D00E27842 /* Utilities.swift */; };
 		DD01E9681F55D8E600E27842 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01E9671F55D8E600E27842 /* UIViewController+Extensions.swift */; };
 		DD01E96A1F56044600E27842 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01E9691F56044600E27842 /* BaseNavigationViewController.swift */; };
+		DD140D0F1F7171BB0095F970 /* FeedEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD140D0E1F7171BB0095F970 /* FeedEntryViewModel.swift */; };
+		DD140D111F71AAAA0095F970 /* String+Truncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD140D101F71AAAA0095F970 /* String+Truncate.swift */; };
 		DD1EF16C1F6AD30C00253B6B /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1EF16B1F6AD30C00253B6B /* EventDetailsViewModel.swift */; };
+		DD2679821F6FFF44009CC0F7 /* EventFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2679811F6FFF44009CC0F7 /* EventFeedCell.swift */; };
+		DD2679841F701D10009CC0F7 /* PaginatedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2679831F701D10009CC0F7 /* PaginatedList.swift */; };
+		DD2679861F701DB9009CC0F7 /* UIScrollView+Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2679851F701DB9009CC0F7 /* UIScrollView+Pagination.swift */; };
+		DD2679881F712A4D009CC0F7 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2679871F712A4D009CC0F7 /* FeedService.swift */; };
+		DD26798A1F712E03009CC0F7 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2679891F712E03009CC0F7 /* Errors.swift */; };
 		DD4F5DE61F5960A300FBC987 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F5DE51F5960A300FBC987 /* EventService.swift */; };
 		DD4F5DE91F5AE60300FBC987 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4F5DE81F5AE60300FBC987 /* Search.storyboard */; };
 		DD4F5DEC1F5D70C500FBC987 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F5DEB1F5D70C500FBC987 /* SearchViewController.swift */; };
@@ -60,6 +67,12 @@
 		DD663DFC1F55973E00832413 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD663DFB1F55973E00832413 /* MapViewController.swift */; };
 		DD806E4E1F6C79B700DBEA84 /* EventDistanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD806E4D1F6C79B600DBEA84 /* EventDistanceCell.swift */; };
 		DD88D74C1F6D2AEE00DEC968 /* EventDistanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88D74B1F6D2AEE00DEC968 /* EventDistanceViewModel.swift */; };
+		DD88D74E1F6D7D4700DEC968 /* EventFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88D74D1F6D7D4700DEC968 /* EventFeedViewModel.swift */; };
+		DD88D7501F6D7EDF00DEC968 /* FeedEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88D74F1F6D7EDF00DEC968 /* FeedEntry.swift */; };
+		DD8C3DCE1FAFB5100092066F /* EventRidesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8C3DCD1FAFB5100092066F /* EventRidesViewModel.swift */; };
+		DD8C3DD01FAFB5380092066F /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8C3DCF1FAFB5380092066F /* Ride.swift */; };
+		DD8C3DD21FAFB7F70092066F /* EventRidesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8C3DD11FAFB7F70092066F /* EventRidesService.swift */; };
+		DD8C3DD41FAFBFA80092066F /* EventRideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8C3DD31FAFBFA80092066F /* EventRideCell.swift */; };
 		E058D2CF94D6F8A3A748847B /* Pods_RaceHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDADD6C81F86D2027343558D /* Pods_RaceHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +113,14 @@
 		DD01E9651F55D86D00E27842 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DD01E9671F55D8E600E27842 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DD01E9691F56044600E27842 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		DD140D0E1F7171BB0095F970 /* FeedEntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedEntryViewModel.swift; sourceTree = "<group>"; };
+		DD140D101F71AAAA0095F970 /* String+Truncate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Truncate.swift"; sourceTree = "<group>"; };
 		DD1EF16B1F6AD30C00253B6B /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
+		DD2679811F6FFF44009CC0F7 /* EventFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventFeedCell.swift; sourceTree = "<group>"; };
+		DD2679831F701D10009CC0F7 /* PaginatedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatedList.swift; sourceTree = "<group>"; };
+		DD2679851F701DB9009CC0F7 /* UIScrollView+Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Pagination.swift"; sourceTree = "<group>"; };
+		DD2679871F712A4D009CC0F7 /* FeedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		DD2679891F712E03009CC0F7 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		DD4F5DE51F5960A300FBC987 /* EventService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 		DD4F5DE81F5AE60300FBC987 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		DD4F5DEB1F5D70C500FBC987 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +169,12 @@
 		DD663DFB1F55973E00832413 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DD806E4D1F6C79B600DBEA84 /* EventDistanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDistanceCell.swift; sourceTree = "<group>"; };
 		DD88D74B1F6D2AEE00DEC968 /* EventDistanceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDistanceViewModel.swift; sourceTree = "<group>"; };
+		DD88D74D1F6D7D4700DEC968 /* EventFeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventFeedViewModel.swift; sourceTree = "<group>"; };
+		DD88D74F1F6D7EDF00DEC968 /* FeedEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedEntry.swift; sourceTree = "<group>"; };
+		DD8C3DCD1FAFB5100092066F /* EventRidesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRidesViewModel.swift; sourceTree = "<group>"; };
+		DD8C3DCF1FAFB5380092066F /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		DD8C3DD11FAFB7F70092066F /* EventRidesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRidesService.swift; sourceTree = "<group>"; };
+		DD8C3DD31FAFBFA80092066F /* EventRideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRideCell.swift; sourceTree = "<group>"; };
 		DDADD6C81F86D2027343558D /* Pods_RaceHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RaceHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE5CE52D399D9D26A03C6B1 /* Pods-RaceHubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaceHubUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RaceHubUITests/Pods-RaceHubUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +250,8 @@
 				DD4F5DFF1F63FCB500FBC987 /* UIView+Tools.swift */,
 				DD4F5E0A1F64168900FBC987 /* Calendar+Tools.swift */,
 				DD4F5E171F6420EF00FBC987 /* String+Localization.swift */,
+				DD2679851F701DB9009CC0F7 /* UIScrollView+Pagination.swift */,
+				DD140D101F71AAAA0095F970 /* String+Truncate.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -233,6 +261,7 @@
 			children = (
 				DD01E9541F55CC3D00E27842 /* ColorPalette.swift */,
 				DD01E9621F55D7E700E27842 /* Segues.swift */,
+				DD2679891F712E03009CC0F7 /* Errors.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -243,6 +272,9 @@
 				DD01E95B1F55D27500E27842 /* Event.swift */,
 				DD4F5DF71F618D6A00FBC987 /* EventMarker.swift */,
 				DD4F5E1C1F65A67800FBC987 /* Filter.swift */,
+				DD88D74F1F6D7EDF00DEC968 /* FeedEntry.swift */,
+				DD2679831F701D10009CC0F7 /* PaginatedList.swift */,
+				DD8C3DCF1FAFB5380092066F /* Ride.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -264,6 +296,18 @@
 				DD01E9651F55D86D00E27842 /* Utilities.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		DD2679801F6FFC6E009CC0F7 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				DD88D74D1F6D7D4700DEC968 /* EventFeedViewModel.swift */,
+				DD4F5E2D1F69941200FBC987 /* EventFeedViewController.swift */,
+				DD2679811F6FFF44009CC0F7 /* EventFeedCell.swift */,
+				DD2679871F712A4D009CC0F7 /* FeedService.swift */,
+				DD140D0E1F7171BB0095F970 /* FeedEntryViewModel.swift */,
+			);
+			name = Feed;
 			sourceTree = "<group>";
 		};
 		DD4F5DE71F5AE5EA00FBC987 /* Storyboards */ = {
@@ -304,11 +348,11 @@
 		DD4F5E221F68014600FBC987 /* EventDetails */ = {
 			isa = PBXGroup;
 			children = (
+				DD8C3DCC1FAFAD710092066F /* Rides */,
+				DD2679801F6FFC6E009CC0F7 /* Feed */,
 				DD4F5E231F68015A00FBC987 /* EventDetailsViewController.swift */,
 				DD4F5E291F696C5A00FBC987 /* EventLandingViewController.swift */,
 				DD4F5E2B1F696C6B00FBC987 /* EventDistancesViewController.swift */,
-				DD4F5E2D1F69941200FBC987 /* EventFeedViewController.swift */,
-				DD4F5E2F1F69946F00FBC987 /* EventRidesViewController.swift */,
 				DD4F5E311F6996B500FBC987 /* EventContactViewController.swift */,
 				DD1EF16B1F6AD30C00253B6B /* EventDetailsViewModel.swift */,
 				DD806E4D1F6C79B600DBEA84 /* EventDistanceCell.swift */,
@@ -397,6 +441,17 @@
 			name = Map;
 			sourceTree = "<group>";
 		};
+		DD8C3DCC1FAFAD710092066F /* Rides */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F5E2F1F69946F00FBC987 /* EventRidesViewController.swift */,
+				DD8C3DCD1FAFB5100092066F /* EventRidesViewModel.swift */,
+				DD8C3DD11FAFB7F70092066F /* EventRidesService.swift */,
+				DD8C3DD31FAFBFA80092066F /* EventRideCell.swift */,
+			);
+			name = Rides;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -476,6 +531,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = K36E9SFT27;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					DD663DDC1F558C2D00832413 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -687,7 +747,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD01E9551F55CC3D00E27842 /* ColorPalette.swift in Sources */,
+				DD140D0F1F7171BB0095F970 /* FeedEntryViewModel.swift in Sources */,
 				DD01E9521F55AD7200E27842 /* UIColor+Extensions.swift in Sources */,
+				DD88D74E1F6D7D4700DEC968 /* EventFeedViewModel.swift in Sources */,
+				DD2679821F6FFF44009CC0F7 /* EventFeedCell.swift in Sources */,
 				DD4F5E1F1F67C99F00FBC987 /* CustomTabBarController.swift in Sources */,
 				DD4F5E001F63FCB500FBC987 /* UIView+Tools.swift in Sources */,
 				DD4F5E091F640DEC00FBC987 /* DateFormatterFactory.swift in Sources */,
@@ -695,25 +758,33 @@
 				DD88D74C1F6D2AEE00DEC968 /* EventDistanceViewModel.swift in Sources */,
 				DD663DFC1F55973E00832413 /* MapViewController.swift in Sources */,
 				DD4F5E0D1F6416D800FBC987 /* EventViewModel.swift in Sources */,
+				DD8C3DD01FAFB5380092066F /* Ride.swift in Sources */,
 				DD4F5DF01F5EDFAA00FBC987 /* RxGMSMapViewDelegateProxy.swift in Sources */,
 				DD4F5E2E1F69941300FBC987 /* EventFeedViewController.swift in Sources */,
+				DD88D7501F6D7EDF00DEC968 /* FeedEntry.swift in Sources */,
+				DD140D111F71AAAA0095F970 /* String+Truncate.swift in Sources */,
 				DD01E9661F55D86D00E27842 /* Utilities.swift in Sources */,
 				DD4F5E181F6420EF00FBC987 /* String+Localization.swift in Sources */,
 				DD4F5E071F640DA900FBC987 /* DateProvider.swift in Sources */,
 				DD01E95C1F55D27500E27842 /* Event.swift in Sources */,
 				DD4F5DE61F5960A300FBC987 /* EventService.swift in Sources */,
 				DD01E96A1F56044600E27842 /* BaseNavigationViewController.swift in Sources */,
+				DD8C3DCE1FAFB5100092066F /* EventRidesViewModel.swift in Sources */,
 				DD4F5DF21F5EE0C900FBC987 /* GMSMapView+Rx.swift in Sources */,
 				DD4F5E321F6996B500FBC987 /* EventContactViewController.swift in Sources */,
+				DD2679861F701DB9009CC0F7 /* UIScrollView+Pagination.swift in Sources */,
 				DD4F5E301F69946F00FBC987 /* EventRidesViewController.swift in Sources */,
+				DD2679881F712A4D009CC0F7 /* FeedService.swift in Sources */,
 				DD4F5E241F68015A00FBC987 /* EventDetailsViewController.swift in Sources */,
 				DD01E94F1F55AD0700E27842 /* Theme.swift in Sources */,
 				DD01E9571F55CD8A00E27842 /* Themes.swift in Sources */,
 				DD4F5DF81F618D6A00FBC987 /* EventMarker.swift in Sources */,
+				DD2679841F701D10009CC0F7 /* PaginatedList.swift in Sources */,
 				DD806E4E1F6C79B700DBEA84 /* EventDistanceCell.swift in Sources */,
 				DD01E9631F55D7E700E27842 /* Segues.swift in Sources */,
 				DD4F5E2A1F696C5A00FBC987 /* EventLandingViewController.swift in Sources */,
 				DD4F5DEC1F5D70C500FBC987 /* SearchViewController.swift in Sources */,
+				DD8C3DD41FAFBFA80092066F /* EventRideCell.swift in Sources */,
 				DD4F5E1D1F65A67800FBC987 /* Filter.swift in Sources */,
 				DD4F5DF41F61600900FBC987 /* GMSMapView+Radius.swift in Sources */,
 				DD663DCD1F558C2D00832413 /* AppDelegate.swift in Sources */,
@@ -722,12 +793,14 @@
 				DD4F5E0B1F64168900FBC987 /* Calendar+Tools.swift in Sources */,
 				DD4F5E211F67F8C400FBC987 /* Translatable.swift in Sources */,
 				DD4F5DFC1F61E1B300FBC987 /* DrawerViewController.swift in Sources */,
+				DD8C3DD21FAFB7F70092066F /* EventRidesService.swift in Sources */,
 				DD1EF16C1F6AD30C00253B6B /* EventDetailsViewModel.swift in Sources */,
 				DD01E94D1F55AC4D00E27842 /* ThemeManager.swift in Sources */,
 				DD4F5E2C1F696C6B00FBC987 /* EventDistancesViewController.swift in Sources */,
 				DD4F5DEE1F5DF62D00FBC987 /* SearchViewModel.swift in Sources */,
 				DD01E9591F55D0C000E27842 /* MapViewModel.swift in Sources */,
 				DD01E95F1F55D36900E27842 /* SplashViewController.swift in Sources */,
+				DD26798A1F712E03009CC0F7 /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,3 +26,8 @@
 "hours_short" = "h";
 "minutes_short" = "m";
 "time_limit" = "Time limit";
+"news" = "News";
+"more_label" = "Details...";
+"no_rides" = "No rides yet";
+"no_rides_body" = "Unfortunately, no one has added a ride for this event yet.";
+"commute_title" = "Commute";
